@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { usePathname } from "next/navigation";
-import Footer from "./component/footer/page";
+//import Footer from "./component/footer/page";
 import Header from "./component/header/page";
 
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {

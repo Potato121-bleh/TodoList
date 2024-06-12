@@ -1,4 +1,4 @@
-'use client'
+{/*'use client'
 import { useRouter } from "next/navigation"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -48,11 +48,11 @@ function Footer({callbackicon}:parameterType){
             <div className="footer-creator-con">
                 <Link className="footer-creator" href='/creator'>Creator</Link>
             </div>
-            {/*<div><h2 className="footer-creator" onClick={callback} >Creator</h2></div>*/}
+            
         </div>
     </footer>
     </>)
 }
 
 
-export default Footer;
+export default Footer;*/}
