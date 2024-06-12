@@ -164,7 +164,7 @@ export default function Home() {
     </div>
   </div>
   <div>
-    <Footer callback={handleicon}></Footer>
+    <Footer callbackicon={handleicon}></Footer>
   </div>
   
   </>
