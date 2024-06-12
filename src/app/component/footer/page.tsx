@@ -6,9 +6,12 @@ import "./../../globals.css"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
+interface parameterType {
+    callback: () => void
+}
 
 let count:number = 0;
-export default function Footer({callback}:any){
+export default function Footer({callback}:parameterType){
     let [Spinicon, setSpinicon] = useState<string>()
     let [Barhometext, setBarhometext] = useState<string>("")
     const router = useRouter()
