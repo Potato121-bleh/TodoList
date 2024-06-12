@@ -5,11 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "./../../globals.css"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-
-interface parameterType {
-    callbackicon: () => void
-}
-
+//@ts-ignore
+type parameterType = {callbackicon: () => void}
 let count:number = 0;
 function Footer({callbackicon}:parameterType){
     let [Spinicon, setSpinicon] = useState<string>()
