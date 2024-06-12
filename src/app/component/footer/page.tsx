@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "./../../globals.css"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-type callback = {
+interface callback {
     callback: () => void
 }
 let count:number = 0;
