@@ -252,8 +252,26 @@ canvas{
   cursor: pointer;
 }
 
-
 /* END HERE */
+
+/* CREATOR SECTION */
+.creator-img-con{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:70vh;
+}
+#creator-img {
+  width:200px;
+  height:300px;
+}
+
+/*   END HERE   */
+
+
+
+
+
 
 /* ADD ON */
 
