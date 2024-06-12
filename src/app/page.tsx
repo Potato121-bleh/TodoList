@@ -1,9 +1,7 @@
 'use client'
-import Testing from './test.jsx'
 import Image from "next/image";
 import styles from "./page.module.css";
-import NewList from "./NewList/page";
-import Footer from "./component/footer/page";
+import Footer from './component/footer/page.jsx';
 import './globals.css'
 import ReactConfetti from 'react-confetti';
 import { useEffect, useState } from "react";

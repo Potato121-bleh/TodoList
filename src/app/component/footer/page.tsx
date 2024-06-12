@@ -5,11 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "./../../globals.css"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-interface callback {
-    callback: () => void
-}
+
+
 let count:number = 0;
-export default function Footer({callback}:callback){
+export default function Footer({callback}:any){
     let [Spinicon, setSpinicon] = useState<string>()
     let [Barhometext, setBarhometext] = useState<string>("")
     const router = useRouter()
