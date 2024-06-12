@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import styles from "./page.module.css";
-import Footer from './component/footer/page.jsx';
+import Footer from './component/footer/page';
 import './globals.css'
 import ReactConfetti from 'react-confetti';
 import { useEffect, useState } from "react";
