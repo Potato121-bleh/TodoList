@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import Footer from "./component/footer/page";
 import './globals.css'
 import ReactConfetti from 'react-confetti';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -26,8 +26,13 @@ export default function Home() {
   let [TriggerRender, setTriggerRender] = useState<string | number>()
   let [Mutebtn, setMutebtn] = useState<string>('')
   let uservalue: string | number;
-  let soundeffect = new Audio("sentsoundV2.wav")
-  let missionsucess = new Audio("Mission-passed-sound.wav")
+
+  const soundeffect = useRef<HTMLAudioElement | undefined>(
+    typeof Audio !== "undefined" ? new Audio("sentsoundV2.wav") : undefined
+  );
+  const missionsucess = useRef<HTMLAudioElement | undefined>(
+    typeof Audio !== "undefined" ? new Audio("Mission-passed-sound.wav") : undefined
+  );
 
   type parameter = string | number;
   const Muteaudio = (audio:HTMLAudioElement) => {
@@ -39,7 +44,7 @@ export default function Home() {
   function handlecontent(elementuser:parameter){
     console.log("THE CLICK IS POSITIVE")
     if(!mute){
-      missionsucess.play()
+      missionsucess.current?.play()
       setTimeout(() => {
         window.alert("Congratulations :b")
       }, 8000);
@@ -68,7 +73,7 @@ export default function Home() {
       userdata.push(uservalue)
     console.log(userdata)
       if(!mute){
-        soundeffect.play()
+        soundeffect.current?.play()
         setTimeout(() => {
           window.alert("GOOD NEWS!, Your item has been created")
         }, 1000);
@@ -99,7 +104,6 @@ export default function Home() {
       mute = true; 
       setMutebtn('red')
     }
-    //Muteaudio()
   }
 
   let handleiconobj = {
