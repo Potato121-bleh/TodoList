@@ -102,6 +102,20 @@ export default function Home() {
     //Muteaudio()
   }
 
+  let handleiconobj = {
+    handleicon(){
+      console.log('It render in page.tsx')
+    count ++
+    if(count % 2 === 0){
+      setDisplayCL("hiddenblock")
+      setDisplayH("")
+    }
+    else{
+      setDisplayH("hiddenblock")
+      setDisplayCL("")
+    }
+    }
+  }
 
   return (<>
   <section className={`section-home-con ${DisplayH}`}>
@@ -167,7 +181,7 @@ export default function Home() {
     </div>
   </div>
   <div>
-  <Footer callbackicon={handleicon}></Footer>
+  <Footer callbackicon={handleiconobj}  ></Footer>
   </div>
   
   </>
